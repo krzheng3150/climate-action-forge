@@ -1,0 +1,19 @@
+name: climate-action-forge
+domains:
+  - domain: climateactionforge.com
+    type: PRIMARY
+  - domain: www.climateactionforge.com
+    type: ALIAS
+static_sites:
+  - name: web
+    github:
+      repo: krzheng3150/climate-action-forge
+      branch: main
+      deploy_on_push: true
+    build_command: npm run build
+    output_dir: dist
+    catchall_document: index.html
+    envs:
+      - key: VITE_WEB3FORMS_KEY
+        scope: BUILD_TIME
+        value: 5ab9ea95-038b-47c8-8acd-8878fb314766
