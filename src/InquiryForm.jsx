@@ -4,6 +4,7 @@ const ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_KEY
 
 export default function InquiryForm() {
   const [status, setStatus] = useState('idle') // idle | sending | sent | error
+  const [errorMsg, setErrorMsg] = useState('')
 
   async function onSubmit(e) {
     e.preventDefault()
@@ -20,6 +21,7 @@ export default function InquiryForm() {
         setStatus('sent')
         e.target.reset()
       } else {
+        setErrorMsg(json.message || '')
         setStatus('error')
       }
     } catch {
@@ -40,7 +42,7 @@ export default function InquiryForm() {
       <button type="submit" disabled={status === 'sending'}>
         {status === 'sending' ? 'Sending…' : 'Send'}
       </button>
-      {status === 'error' && <p>Something went wrong. Please try again.</p>}
+      {status === 'error' && <p>Something went wrong{errorMsg && `: ${errorMsg}`}. Please try again.</p>}
     </form>
   )
 }
