@@ -13,7 +13,7 @@ export default function InquiryForm() {
       const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({ ...data, access_key: ACCESS_KEY }),
+        body: JSON.stringify(data),
       })
       const json = await res.json()
       if (json.success) {
@@ -30,7 +30,8 @@ export default function InquiryForm() {
   if (status === 'sent') return <p>Thanks! We'll be in touch.</p>
 
   return (
-    <form onSubmit={onSubmit} style={{ display: 'grid', gap: '0.75rem' }}>
+    <form action="https://api.web3forms.com/submit" method="POST" onSubmit={onSubmit} style={{ display: 'grid', gap: '0.75rem' }}>
+      <input type="hidden" name="access_key" value={ACCESS_KEY} />
       <input name="name" placeholder="Your name" required />
       <input name="email" type="email" placeholder="Your email" required />
       <textarea name="message" placeholder="Your inquiry" rows={5} required />
