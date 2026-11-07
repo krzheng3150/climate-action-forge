@@ -3,7 +3,7 @@ import { useState } from 'react'
 const ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_KEY
 
 export default function InquiryForm() {
-  const [status, setStatus] = useState('idle') // idle | sending | sent | error
+  const [status, setStatus] = useState('idle')
   const [errorMsg, setErrorMsg] = useState('')
 
   async function onSubmit(e) {
@@ -29,20 +29,21 @@ export default function InquiryForm() {
     }
   }
 
-  if (status === 'sent') return <p>Thanks! We'll be in touch.</p>
+  if (status === 'sent') return <p className="form-success">Thanks! We'll be in touch.</p>
 
   return (
-    <form action="https://api.web3forms.com/submit" method="POST" onSubmit={onSubmit} style={{ display: 'grid', gap: '0.75rem' }}>
+    <form className="inquiry-form" onSubmit={onSubmit}>
       <input type="hidden" name="access_key" value={ACCESS_KEY} />
       <input name="name" placeholder="Your name" required />
       <input name="email" type="email" placeholder="Your email" required />
       <textarea name="message" placeholder="Your inquiry" rows={5} required />
-      {/* honeypot: hidden from people, bots fill it in and Web3Forms drops the submission */}
       <input type="checkbox" name="botcheck" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
       <button type="submit" disabled={status === 'sending'}>
-        {status === 'sending' ? 'Sending…' : 'Send'}
+        {status === 'sending' ? 'Sending…' : 'Send Inquiry'}
       </button>
-      {status === 'error' && <p>Something went wrong{errorMsg && `: ${errorMsg}`}. Please try again.</p>}
+      {status === 'error' && (
+        <p className="form-error">Something went wrong{errorMsg && `: ${errorMsg}`}. Please try again.</p>
+      )}
     </form>
   )
 }
