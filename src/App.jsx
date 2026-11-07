@@ -21,8 +21,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/apps/acam" element={<AcamPage />} />
-        <Route path="/privacy" element={<PrivacyPolicy />} />
-        <Route path="/terms" element={<TermsOfService />} />
+        <Route path="/apps/acam/privacy" element={<PrivacyPolicy />} />
+        <Route path="/apps/acam/terms" element={<TermsOfService />} />
       </Routes>
       <Footer />
     </>

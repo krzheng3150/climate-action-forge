@@ -7,7 +7,7 @@ export default function TermsOfService() {
   return (
     <article className="legal-page">
       <div className="container-narrow">
-        <Link to="/" className="legal-back">&larr; Back to Home</Link>
+        <Link to="/apps/acam" className="legal-back">&larr; Back to ACAM</Link>
         <h1>Terms of Service for Automated Climate Action Maker (ACAM)</h1>
         <p className="legal-updated">Last updated: November 2026</p>
         <p>
@@ -30,7 +30,7 @@ export default function TermsOfService() {
         <p>
           All browsing analysis, recommendations, and point tracking are stored exclusively in your browser's
           local storage. You can purge all stored data at any time from the extension popup. See
-          our <Link to="/privacy">Privacy Policy</Link> for full details.
+          our <Link to="/apps/acam/privacy">Privacy Policy</Link> for full details.
         </p>
 
         <h2>4. External Links</h2>

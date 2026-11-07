@@ -120,12 +120,12 @@ export default function AcamPage() {
         <div className="container" style={{ maxWidth: 'var(--container-narrow)' }}>
           <h2 className="section-title">Legal</h2>
           <div className="card-grid" style={{ gridTemplateColumns: '1fr 1fr' }}>
-            <Link to="/privacy" className="card" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <Link to="/apps/acam/privacy" className="card" style={{ textDecoration: 'none', color: 'inherit' }}>
               <h3>Privacy Policy</h3>
               <p>Full details on how ACAM handles your data with zero telemetry.</p>
               <span className="card-links"><span style={{ color: 'var(--primary)', fontWeight: 600, fontSize: '0.85rem' }}>Read Privacy Policy &rarr;</span></span>
             </Link>
-            <Link to="/terms" className="card" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <Link to="/apps/acam/terms" className="card" style={{ textDecoration: 'none', color: 'inherit' }}>
               <h3>Terms of Service</h3>
               <p>Terms governing your use of the ACAM browser extension.</p>
               <span className="card-links"><span style={{ color: 'var(--primary)', fontWeight: 600, fontSize: '0.85rem' }}>Read Terms &rarr;</span></span>

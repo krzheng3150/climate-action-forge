@@ -11,8 +11,8 @@ export default function Footer() {
         <div>
           <h4>Legal</h4>
           <ul className="footer-links">
-            <li><Link to="/privacy">Privacy Policy</Link></li>
-            <li><Link to="/terms">Terms of Service</Link></li>
+            <li><Link to="/apps/acam/privacy">Privacy Policy</Link></li>
+            <li><Link to="/apps/acam/terms">Terms of Service</Link></li>
           </ul>
         </div>
         <div>

@@ -7,7 +7,7 @@ export default function PrivacyPolicy() {
   return (
     <article className="legal-page">
       <div className="container-narrow">
-        <Link to="/" className="legal-back">&larr; Back to Home</Link>
+        <Link to="/apps/acam" className="legal-back">&larr; Back to ACAM</Link>
         <h1>Privacy Policy for Automated Climate Action Maker (ACAM)</h1>
         <p className="legal-updated">Last updated: October 2026</p>
         <p>
