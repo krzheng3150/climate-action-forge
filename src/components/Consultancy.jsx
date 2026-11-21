@@ -16,6 +16,7 @@ export default function Consultancy() {
               A platform connecting climate professionals and organizations
               to accelerate collaboration on climate solutions.
             </p>
+            <a href="https://connected-in-climate-n42zu.ondigitalocean.app/" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm">View App</a>
           </div>
 
           <div className="card card-dark">
@@ -25,6 +26,7 @@ export default function Consultancy() {
               Building tools to help communities understand and prepare for
               climate shock events through data-driven insights.
             </p>
+            <a href="https://shockt-app-z6auf.ondigitalocean.app/" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm">View App</a>
           </div>
         </div>
       </div>
