@@ -8,9 +8,8 @@ export default function Hero() {
           <span className="accent">Climate Action</span>
         </h1>
         <p>
-          Climate Action Forge develops open-source climate action apps and
-          provides consultancy for climate software founders turning ideas
-          into impact.
+          We build open-source climate apps and help Climatebase Fellowship
+          founders ship their software.
         </p>
         <div className="hero-ctas">
           <a href="#apps" className="btn btn-primary">Explore Our Apps</a>

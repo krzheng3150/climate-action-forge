@@ -4,8 +4,8 @@ export default function Consultancy() {
       <div className="container">
         <h2 className="section-title">Consultancy Services</h2>
         <p className="section-subtitle">
-          We work with <a href="https://climatebase.org/fellowship" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)' }}>Climatebase Fellowship</a> members
-          to bring climate software ideas to life — from concept to launch.
+          We help <a href="https://climatebase.org/fellowship" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)' }}>Climatebase Fellowship</a> members
+          build and ship their climate software projects.
         </p>
 
         <div className="card-grid">
@@ -13,9 +13,8 @@ export default function Consultancy() {
             <span className="card-badge badge-blue">Fellowship Project - Cohort 10</span>
             <h3>Connected in Climate</h3>
             <p>
-              A mentorship platform that pairs experienced climate professionals
-              with people looking to transition into climate careers — making the
-              industry more accessible, one connection at a time.
+              Pairs climate professionals with people looking to break into
+              climate careers. Mentors help mentees find their path in.
             </p>
             <a href="https://connected-in-climate-n42zu.ondigitalocean.app/" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm">View App</a>
           </div>
@@ -24,9 +23,9 @@ export default function Consultancy() {
             <span className="card-badge badge-purple">Fellowship Project - Cohort 10</span>
             <h3>ShockT</h3>
             <p>
-              Helps companies evaluate shipping route tradeoffs when supply chains
-              are disrupted — comparing cost, time, and emissions across
-              alternative routes so logistics teams can make informed decisions fast.
+              When a supply chain disruption hits, companies need to reroute
+              shipments. ShockT compares alternative routes by cost, time, and
+              emissions so logistics teams can pick the right tradeoff.
             </p>
             <a href="https://shockt-app-z6auf.ondigitalocean.app/" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm">View App</a>
           </div>

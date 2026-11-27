@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="footer-inner">
         <div>
           <div className="footer-brand">Climate Action Forge</div>
-          <p className="footer-tagline">Building open-source apps for climate action.</p>
+          <p className="footer-tagline">Open-source climate apps and fellowship consultancy.</p>
         </div>
         <div>
           <h4>Legal</h4>

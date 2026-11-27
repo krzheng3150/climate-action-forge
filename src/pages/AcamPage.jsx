@@ -12,8 +12,8 @@ export default function AcamPage() {
           <div className="hero-badge" style={{ marginTop: '1.5rem' }}>Chrome Extension &middot; Free &amp; Open Source</div>
           <h1>Automated Climate Action Maker</h1>
           <p>
-            A privacy-first browser extension that turns your everyday browsing into
-            climate-positive action — all processed locally on your device with zero telemetry.
+            A Chrome extension that looks at your browsing habits and nudges you
+            toward climate-friendly choices. Everything runs locally on your device.
           </p>
           <div className="hero-ctas">
             <a
@@ -40,40 +40,36 @@ export default function AcamPage() {
         <div className="container">
           <h2 className="section-title">How It Works</h2>
           <p className="section-subtitle">
-            ACAM analyzes your browsing patterns entirely on your device to suggest
-            personalized climate actions.
+            ACAM reads your browsing history locally and figures out how to help.
           </p>
           <div className="card-grid">
             <div className="card">
-              <h3>Browsing Footprint Analysis</h3>
+              <h3>Browsing Profile</h3>
               <p>
-                Scans your browsing history locally to build a digital carbon footprint
-                estimate. Only domain-level frequencies are stored — never full URLs,
-                paths, or query parameters.
+                Scans your history to understand what you browse and how. Stores
+                domain-level counts only, never full URLs or search terms.
               </p>
             </div>
             <div className="card">
-              <h3>Personalized Interventions</h3>
+              <h3>Smart Nudges</h3>
               <p>
-                Surfaces contextual nudges based on your browsing archetype — from
-                food swap suggestions with CO₂ comparisons to refurbished product
-                alternatives and civic petitions.
+                Based on what you browse, ACAM suggests food swaps with CO₂
+                comparisons, refurbished product alternatives, and petitions
+                you might care about.
               </p>
             </div>
             <div className="card">
-              <h3>Civic Action Matching</h3>
+              <h3>Local Climate Events</h3>
               <p>
-                Detects your region from timezone and browsing patterns, then matches
-                you with relevant climate petitions, campaigns, and civic actions
-                happening near you.
+                Figures out roughly where you are from your browsing patterns
+                and shows climate events, petitions, and campaigns near you.
               </p>
             </div>
             <div className="card">
               <h3>Impact Tracking</h3>
               <p>
-                Tracks your estimated CO₂ avoided and civic engagement points locally.
-                Gamification rewards keep you motivated without any data leaving your
-                machine.
+                Keeps a running tally of your estimated CO₂ avoided and civic
+                actions taken. All stored locally.
               </p>
             </div>
           </div>
@@ -84,32 +80,32 @@ export default function AcamPage() {
         <div className="container">
           <h2 className="section-title">Privacy by Design</h2>
           <p className="section-subtitle">
-            ACAM was built from the ground up with a zero-telemetry architecture.
+            Your browsing data never leaves your browser. Here's how we enforce that.
           </p>
           <div className="card-grid">
             <div className="card card-dark">
               <h3>100% On-Device</h3>
-              <p>All processing happens in your browser. No remote servers, no cloud sync, no analytics SDKs.</p>
+              <p>All analysis happens in your browser. We don't run servers, and there's no cloud sync.</p>
             </div>
             <div className="card card-dark">
-              <h3>No Network Requests</h3>
+              <h3>Locked-Down Networking</h3>
               <p>
-                The extension's Content Security Policy locks execution to <code>self</code>.
-                The source code contains zero network egress primitives.
+                The only network requests are anonymous product availability
+                checks. Your browsing data is never in those requests.
               </p>
             </div>
             <div className="card card-dark">
-              <h3>Data Minimization</h3>
+              <h3>Minimal Storage</h3>
               <p>
-                Only domain-level frequencies are stored, capped at 100 entries.
-                Full URLs and query parameters are never retained.
+                We store domain-level counts, capped at 100 entries. Full URLs
+                and search terms are never kept.
               </p>
             </div>
             <div className="card card-dark">
               <h3>You Own Your Data</h3>
               <p>
-                Purge all stored data instantly from the extension popup. Uninstalling
-                the extension deletes everything.
+                Wipe all stored data from the extension popup. Uninstalling
+                deletes everything too.
               </p>
             </div>
           </div>
@@ -122,7 +118,7 @@ export default function AcamPage() {
           <div className="card-grid" style={{ gridTemplateColumns: '1fr 1fr' }}>
             <Link to="/apps/acam/privacy" className="card" style={{ textDecoration: 'none', color: 'inherit' }}>
               <h3>Privacy Policy</h3>
-              <p>Full details on how ACAM handles your data with zero telemetry.</p>
+              <p>How ACAM handles your data and why nothing leaves your device.</p>
               <span className="card-links"><span style={{ color: 'var(--primary)', fontWeight: 600, fontSize: '0.85rem' }}>Read Privacy Policy &rarr;</span></span>
             </Link>
             <Link to="/apps/acam/terms" className="card" style={{ textDecoration: 'none', color: 'inherit' }}>

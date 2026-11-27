@@ -6,8 +6,7 @@ export default function InquirySection() {
       <div className="inquiry-wrapper">
         <h2 className="section-title">Get in Touch</h2>
         <p className="section-subtitle">
-          Have a question, want to collaborate, or interested in our consultancy
-          services? Send us an inquiry.
+          Want to work together? Drop us a line.
         </p>
         <InquiryForm />
       </div>

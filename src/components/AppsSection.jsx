@@ -6,8 +6,7 @@ export default function AppsSection() {
       <div className="container">
         <h2 className="section-title">Climate Action Apps</h2>
         <p className="section-subtitle">
-          Free, open-source tools that help people take meaningful climate action
-          in their daily lives.
+          Free, open-source tools for everyday climate action.
         </p>
 
         <div className="card-grid">
@@ -15,10 +14,10 @@ export default function AppsSection() {
             <span className="card-badge badge-green">Chrome Extension</span>
             <h3>Automated Climate Action Maker (ACAM)</h3>
             <p>
-              A privacy-first browser extension that analyzes your browsing
-              patterns locally on your device and suggests climate-positive
-              actions — signing petitions, finding refurbished alternatives,
-              and making lower-emission food choices. Zero telemetry.
+              A Chrome extension that looks at your browsing habits (locally,
+              on your device) and nudges you toward climate-friendly choices.
+              Petitions near you, refurbished alternatives, lower-emission
+              food swaps. No data leaves your browser.
             </p>
             <ul className="app-features">
               <li>100% On-Device</li>

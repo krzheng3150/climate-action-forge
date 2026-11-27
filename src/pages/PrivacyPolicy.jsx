@@ -11,81 +11,72 @@ export default function PrivacyPolicy() {
         <h1>Privacy Policy for Automated Climate Action Maker (ACAM)</h1>
         <p className="legal-updated">Last updated: November 2026</p>
         <p>
-          The <strong>Automated Climate Action Maker (ACAM)</strong> browser extension is designed with a strict{' '}
-          <strong>Local-First, Zero-Telemetry Privacy Architecture</strong>. This policy explains how ACAM handles
-          your information and demonstrates our commitment to user privacy and data sovereignty.
+          ACAM is a local-first Chrome extension. Your browsing data stays in your browser, and we don't
+          run servers to collect it. This policy explains exactly what ACAM does and doesn't do with
+          your information.
         </p>
 
-        <h2>1. Core Guarantee: Your Data Stays on Your Device</h2>
+        <h2>1. Your Data Stays on Your Device</h2>
         <p>
-          Under no circumstance does ACAM transmit, sync, or sell your browsing history, visited URLs, personal
-          identifiers, interest profiles, location estimates, or digital carbon metrics to external servers.
+          ACAM never sends your browsing history, visited URLs, interest profiles, location estimates,
+          or any personal identifiers to any server. Period.
         </p>
         <ul>
           <li>
-            <strong>No Remote Servers:</strong> We do not operate telemetry servers, analytics collectors, or cloud databases.
+            <strong>No servers:</strong> We don't operate telemetry servers, analytics collectors, or cloud databases.
           </li>
           <li>
-            <strong>No Third-Party Analytics:</strong> ACAM contains zero third-party tracking libraries, analytics
-            scripts (e.g., Google Analytics, Mixpanel), or error-monitoring SDKs (e.g., Sentry).
+            <strong>No tracking libraries:</strong> No Google Analytics, no Mixpanel, no Sentry, no third-party
+            scripts of any kind.
           </li>
           <li>
-            <strong>Hardened Sandbox:</strong> The extension's Content Security Policy (CSP) strictly locks
-            script execution to <code>'self'</code>. No third-party code runs inside the extension.
+            <strong>Sandboxed execution:</strong> The extension's Content Security Policy locks
+            script execution to <code>'self'</code>. No third-party code runs inside ACAM.
           </li>
         </ul>
 
-        <h2>2. Information Handled &amp; On-Device Processing</h2>
+        <h2>2. What ACAM Does on Your Device</h2>
         <p>
-          ACAM processes browsing activity entirely within your browser to personalize climate action
-          recommendations. Everything described below stays on your device.
+          Everything below happens locally in your browser. None of it is sent anywhere.
         </p>
 
         <h3>A. Browsing Profile</h3>
         <ul>
           <li>
-            <strong>What is accessed:</strong> When you trigger a scan or browse with auto-scan enabled,
-            ACAM reads your local Chromium history to build a browsing profile.
+            <strong>What it reads:</strong> When you trigger a scan or have auto-scan on,
+            ACAM reads your local Chrome history.
           </li>
           <li>
-            <strong>Topic &amp; Interest Classification:</strong> ACAM analyzes domain names and URL path
-            keywords to classify your browsing into broad interest categories (e.g., food, travel, fitness)
-            and climate topic affinities. This powers personalized nudge recommendations.
+            <strong>Interests:</strong> It classifies your browsing into broad categories
+            (food, travel, fitness, etc.) and figures out what motivates you (cost savings,
+            health, community) to pick relevant nudges.
           </li>
           <li>
-            <strong>Motivator Signals:</strong> Browsing patterns are scored against motivator categories
-            (cost, health, community, identity) to frame nudges in ways that resonate with you.
-          </li>
-          <li>
-            <strong>What is stored:</strong> Only aggregated scores and category tallies are persisted
-            in <code>chrome.storage.local</code>. Full URLs are processed in memory and discarded — never
-            written to storage.
+            <strong>What it stores:</strong> Only aggregated scores and category tallies go
+            into <code>chrome.storage.local</code>. Full URLs are processed in memory and
+            thrown away.
           </li>
         </ul>
 
         <h3>B. Location Estimate</h3>
         <ul>
           <li>
-            ACAM estimates your approximate city from patterns in your browsing history (e.g., local news
-            domains, city-specific sites) to rank nearby climate events and civic actions.
-          </li>
-          <li>
-            This estimate is computed entirely on your device. It is never transmitted anywhere.
+            ACAM guesses your approximate city from your browsing patterns (local news sites,
+            city-specific domains) to show nearby climate events. This guess stays on your device.
           </li>
         </ul>
 
         <h3>C. Impact Metrics &amp; Preferences</h3>
         <ul>
           <li>
-            Gamification counters (Civic Points, estimated kilograms of CO₂ avoided), nudge frequency
-            settings, and other preferences are stored locally in <code>chrome.storage.local</code>.
+            Your point tallies (CO₂ avoided, civic actions), nudge frequency settings, and
+            preferences are stored locally in <code>chrome.storage.local</code>.
           </li>
         </ul>
 
-        <h2>3. Chrome Permissions &amp; Why They Are Needed</h2>
+        <h2>3. Chrome Permissions</h2>
         <p>
-          In accordance with the Chrome Web Store <strong>Principle of Least Privilege</strong>, ACAM only requests
-          permissions that are directly necessary for its purpose:
+          ACAM only requests permissions it actually needs:
         </p>
         <table>
           <thead>
@@ -94,72 +85,58 @@ export default function PrivacyPolicy() {
           <tbody>
             <tr>
               <td><code>history</code></td>
-              <td>Required to perform on-device analysis of your browsing activity to compute carbon footprint estimates, interest profiles, and personalized recommendations.</td>
+              <td>Needed to read your browsing history locally for profile building and recommendations.</td>
             </tr>
             <tr>
               <td><code>storage</code></td>
-              <td>Required to persist your on-device profile scores, impact metrics, and preference toggles within Chromium's local sandboxed storage.</td>
+              <td>Needed to save your profile scores, impact metrics, and settings in local browser storage.</td>
             </tr>
             <tr>
               <td><code>alarms</code></td>
-              <td>Required to schedule periodic, low-resource refresh of local profile data without running battery-draining continuous background timers.</td>
+              <td>Needed to schedule periodic profile refreshes without running a constant background timer.</td>
             </tr>
             <tr>
               <td><code>host_permissions</code> (10 partner sites)</td>
-              <td>Required to link you to refurbished and secondhand alternatives on partner sites (Back Market, eBay, Swappa, ThredUp, Poshmark, Depop, ThriftBooks, Better World Books, Chairish, AptDeco) and check whether listings exist before showing a link.</td>
+              <td>Needed to link you to refurbished and secondhand alternatives on these sites: Back Market, eBay, Swappa, ThredUp, Poshmark, Depop, ThriftBooks, Better World Books, Chairish, and AptDeco. Also used to check whether listings exist before showing a link.</td>
             </tr>
           </tbody>
         </table>
 
-        <h2>4. User Control &amp; Data Deletion</h2>
-        <p>You maintain complete control over your data:</p>
+        <h2>4. Your Controls</h2>
         <ul>
           <li>
-            <strong>Purge Local Cache:</strong> Clicking the <strong>"Purge Local Cache"</strong> button in the
-            ACAM popup immediately wipes all stored profiles, metrics, and queued
-            visits from <code>chrome.storage.local</code>.
+            <strong>Purge Local Cache:</strong> Hit "Purge Local Cache" in the popup to wipe all stored
+            data instantly.
           </li>
           <li>
-            <strong>Adjust Nudge Frequency:</strong> You can control how often ACAM surfaces recommendations
-            via the frequency dial in the popup interface.
+            <strong>Nudge Frequency:</strong> Control how often ACAM shows recommendations with the
+            frequency dial.
           </li>
           <li>
-            <strong>Uninstalling:</strong> Removing the extension from your browser instantly deletes all extension
-            storage and state held by Chromium.
+            <strong>Uninstall:</strong> Removing the extension deletes everything it stored.
           </li>
         </ul>
 
         <h2>5. Chrome Web Store Limited Use Disclosure</h2>
         <p>
-          ACAM's use and transfer of information received from Google APIs adheres to the{' '}
-          <strong>Chrome Web Store User Data Policy</strong>, including the <strong>Limited Use</strong> requirements:
+          ACAM complies with the Chrome Web Store <strong>User Data Policy</strong> and{' '}
+          <strong>Limited Use</strong> requirements:
         </p>
         <ol>
-          <li>
-            Data is utilized exclusively to provide on-device carbon footprint insights, personalized
-            sustainability nudges, and civic action recommendations visible directly to the user.
-          </li>
-          <li>
-            Data is never transferred to third parties or used for personalized advertising, credit assessment,
-            or data broker sales.
-          </li>
-          <li>No human reads or has access to your browsing signals.</li>
+          <li>Your data is only used to show you climate nudges and recommendations on your own screen.</li>
+          <li>Your data is never sold, shared with third parties, or used for advertising.</li>
+          <li>No human ever sees your browsing data.</li>
         </ol>
 
-        <h2>6. Open Source Verification &amp; Contact</h2>
+        <h2>6. Open Source</h2>
         <p>
-          ACAM is open source and auditable. You can independently verify our privacy guarantees and source
-          code directly in our{' '}
+          ACAM is open source. You can verify everything in this policy by reading the{' '}
           <a href="https://github.com/krzheng3150/automated-climate-action-maker" target="_blank" rel="noopener noreferrer">
-            repository
+            source code
           </a>.
-        </p>
-        <p>
-          If you have questions, feedback, or security inquiries regarding ACAM's privacy practices, please{' '}
-          <a href="https://github.com/krzheng3150/automated-climate-action-maker/issues" target="_blank" rel="noopener noreferrer">
-            open an issue
-          </a>{' '}
-          in the official repository or contact the maintainers.
+          Questions or concerns? <a href="https://github.com/krzheng3150/automated-climate-action-maker/issues" target="_blank" rel="noopener noreferrer">
+            Open an issue
+          </a>.
         </p>
 
         <h2>7. Frequently Asked Questions</h2>
